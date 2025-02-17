@@ -4,6 +4,34 @@ This application allows for streaming point clouds to a Unity application or to 
 You will find a short presentation of the application in the video below (click to go to YouTube):
 [![YouTube link](http://img.youtube.com/vi/Wc5z9OWFTTU/0.jpg)](http://www.youtube.com/watch?v=Wc5z9OWFTTU)
 
+## Structure of the project
+1. LiveScan3D-Hololens/
+   - HololensReceiver/
+      - Assets/
+         - PointCloudReceiver.cs
+         - PointCloudRenderer.cs
+         - [Other Unity scripts, prefabs, materials, etc.]
+      - Packages/
+      - ProjectSettings/
+         - [Unity-specific files: .meta, .asmdef, etc.]
+2. LiveScan3D/
+   - LiveScan3D.sln
+   - LiveScan3D.csproj
+   - App.xaml
+   - App.xaml.cs
+   - MainWindow.xaml
+   - MainWindow.xaml.cs
+   - Kinect2Interface.cs
+   - RealSenseInterface.cs
+   - Calibration.* / ManualCalibration.*
+   - [Other .NET source files for capturing, processing, and streaming data]
+3. Networking/
+   - TransferSocket.cs
+   - [Other networking utilities or shared code]
+4. README.md
+5. [Miscellaneous config files, .gitignore, etc.]
+
+
 ## How to get it running with LiveScan3D ##
 First of all you will need to setup the following apps:
  - [LiveScan3D](https://github.com/MarekKowalski/LiveScan3D) - our open-source app for 3D reconstruction using Kinects.
